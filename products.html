@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mon Informatique - Nos Produits</title>
+  
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 min-h-screen flex flex-col">
+  
+  <nav-component></nav-component>
+  
+  <header class="bg-blue-600 text-white py-12">
+    <div class="container mx-auto px-4">
+      <h1 class="text-4xl font-bold">Nos Produits</h1>
+      <p class="text-xl mt-2">Découvrez notre gamme de produits informatiques de haute qualité</p>
+    </div>
+  </header>
+  
+  <main class="container mx-auto px-4 py-12 flex-grow">
+    <div class="mb-8">
+      <h2 class="text-2xl font-bold mb-4 text-gray-800">Catégories</h2>
+      <div id="categories-container" class="flex flex-wrap gap-2">
+      </div>
+    </div>
+    
+    <div id="products-container" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+    </div>
+  </main>
+  
+  <footer-component></footer-component>
+  
+  <script src="assets/js/data/products.js"></script>
+  <script src="assets/js/components/navbar.js"></script>
+  <script src="assets/js/components/productCard.js"></script>
+  <script src="assets/js/components/footer.js"></script>
+  <script src="assets/js/app.js"></script>
+</body>
+</html>

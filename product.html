@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mon Informatique - Détail du produit</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 min-h-screen flex flex-col">
+  <nav-component></nav-component>
+
+  <main class="container mx-auto px-4 py-12 flex-grow">
+    <div class="mb-6">
+      <div class="flex items-center text-sm text-gray-600">
+        <a href="index.html" class="hover:text-blue-500">Accueil</a>
+        <span class="mx-2">&gt;</span>
+        <a href="products.html" class="hover:text-blue-500">Produits</a>
+        <span class="mx-2">&gt;</span>
+        <span id="product-title-breadcrumb" class="text-gray-800 font-medium">Détail du produit</span>
+      </div>
+    </div>
+
+    <div class="bg-white rounded-lg shadow-md p-6">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div>
+          <div class="mb-4">
+            <img id="product-main-image" src="" alt="" class="w-full h-auto rounded-lg shadow">
+          </div>
+          <div id="product-thumbnails" class="flex flex-wrap gap-2"></div>
+        </div>
+
+        <div>
+          <h1 id="product-title" class="text-3xl font-bold text-gray-800 mb-2"></h1>
+          <p id="product-reference" class="text-sm text-gray-500 mb-4"></p>
+          
+          <div class="mb-6">
+            <span id="product-price" class="text-3xl font-bold text-blue-600"></span>
+          </div>
+          
+          <div class="flex space-x-2 mb-8">
+            <button class="bg-blue-500 hover:bg-blue-600 text-white font-bold py-3 px-6 rounded-lg transition flex-grow">
+              Ajouter au panier
+            </button>
+            <button class="bg-gray-200 hover:bg-gray-300 text-gray-800 font-bold py-3 px-4 rounded-lg transition">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
+              </svg>
+            </button>
+          </div>
+
+          <div>
+            <h2 class="text-xl font-bold mb-4 text-gray-800">Tableau de caractéristiques</h2>
+            <table class="w-full mb-8">
+              <tr class="border-b">
+                <td class="py-2 font-medium text-gray-600">Livraison</td>
+                <td class="py-2 text-gray-800">Gratuite</td>
+              </tr>
+              <tr class="border-b">
+                <td class="py-2 font-medium text-gray-600">Garantie</td>
+                <td class="py-2 text-gray-800">2 ans</td>
+              </tr>
+              <tr class="border-b">
+                <td class="py-2 font-medium text-gray-600">Disponibilité</td>
+                <td class="py-2 text-gray-800">En stock</td>
+              </tr>
+              <tr>
+                <td class="py-2 font-medium text-gray-600">Délai d'expédition</td>
+                <td class="py-2 text-gray-800">1-2 jours ouvrés</td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </div>
+
+      <div class="mt-12">
+        <h2 class="text-2xl font-bold mb-6 text-gray-800">Description détaillée</h2>
+        <div id="product-description" class="prose max-w-none text-gray-700"></div>
+      </div>
+    </div>
+  </main>
+
+  <footer-component></footer-component>
+
+  <script src="assets/js/data/products.js"></script>
+  <script src="assets/js/components/navbar.js"></script>
+  <script src="assets/js/components/footer.js"></script>
+  <script src="assets/js/app.js"></script>
+</body>
+</html>
